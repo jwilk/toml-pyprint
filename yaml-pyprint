@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# encoding=UTF-8
 
 # Copyright © 2015-2018 Jakub Wilk <jwilk@jwilk.net>
 # SPDX-License-Identifier: MIT
@@ -8,6 +9,8 @@ import sys
 import pprint
 
 import yaml
+
+...  # Python 3 is required
 
 ap = argparse.ArgumentParser()
 ap.add_argument('path', metavar='FILE', nargs='?', help='YAML file to parse')
