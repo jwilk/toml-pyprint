@@ -1,0 +1,21 @@
+language: python
+python:
+- "3.2"
+- "3.3"
+- "3.4"
+- "3.5"
+- "3.6"
+- "3.7-dev"
+matrix:
+  allow_failures:
+  - python: "3.7-dev"
+cache: pip
+install:
+- pip install PyYAML
+- pip install pydiatra pyflakes
+script:
+- python3 -m pydiatra .
+- python3 -m pyflakes .
+- ./yaml-pyprint .travis.yml
+
+# vim:ts=2 sts=2 sw=2 et
