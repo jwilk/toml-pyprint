@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# Copyright © 2015-2018 Jakub Wilk <jwilk@jwilk.net>
+# SPDX-License-Identifier: MIT
+
 import sys
 import pprint
 
