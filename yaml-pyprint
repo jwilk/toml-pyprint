@@ -12,7 +12,7 @@ import yaml
 ap = argparse.ArgumentParser()
 ap.add_argument('path', metavar='FILE', nargs='?', help='YAML file to parse')
 options = ap.parse_args()
-if options.path:
+if options.path is not None:
     fp = open(options.path, 'rb')
 else:
     fp = sys.stdin.buffer
