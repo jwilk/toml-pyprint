@@ -8,7 +8,7 @@ import pprint
 
 import yaml
 
-d = yaml.safe_load(sys.stdin)
+d = yaml.safe_load(sys.stdin.buffer)
 pprint.pprint(d)
 
 # vim:ts=4 sts=4 sw=4 et
