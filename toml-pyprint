@@ -8,19 +8,19 @@ import argparse
 import sys
 import pprint
 
-import yaml
+import pytoml.parser
 
 ...  # Python 3 is required
 
 ap = argparse.ArgumentParser()
-ap.add_argument('path', metavar='FILE', nargs='?', help='YAML file to parse')
+ap.add_argument('path', metavar='FILE', nargs='?', help='TOML file to parse')
 options = ap.parse_args()
 if options.path is not None:
     fp = open(options.path, 'rb')
 else:
     fp = sys.stdin.buffer
 with fp:
-    d = yaml.safe_load(fp)
+    d = pytoml.parser.load(fp)
 pprint.pprint(d)
 
 # vim:ts=4 sts=4 sw=4 et
