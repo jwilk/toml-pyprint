@@ -8,7 +8,10 @@ import argparse
 import sys
 import pprint
 
-import tomli
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
+    import tomli as tomllib
 
 ...  # Python 3 is required
 
@@ -20,7 +23,7 @@ if options.path is not None:
 else:
     fp = sys.stdin.buffer
 with fp:
-    d = tomli.load(fp)
+    d = tomllib.load(fp)
 pprint.pprint(d)
 
 # vim:ts=4 sts=4 sw=4 et
